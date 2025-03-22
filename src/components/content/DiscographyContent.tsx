@@ -73,7 +73,7 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       year: '2024',
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1120552345/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/track/ms-ministry">Ms. Ministry by Interlinked Records</a></iframe>',
-      description: "Ms. Minsitry fuses hard dark brooding IDM with Indide Dance vibes.'
+      description: "Ms. Minsitry fuses hard dark brooding IDM with Indide Dance vibes."
     }
   ];
 
