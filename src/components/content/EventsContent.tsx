@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const EventsContent: React.FC = () => {
   const events = [
@@ -33,56 +34,58 @@ const EventsContent: React.FC = () => {
   ];
 
   return (
-    <div className="max-h-[calc(100vh-16rem)] overflow-hidden">
+    <div>
       <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_EVENTS</h2>
       
-      <div className="space-y-6">
-        {events.map((event) => (
-          <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150">
-            <div className="border-b border-border p-4">
-              <div className="flex justify-between items-start">
-                <h3 className="text-lg text-secondary font-display tracking-wider">{event.title}</h3>
-                <div className="text-xs border border-border px-2 py-1">
-                  {new Date(event.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                  })}
+      <ScrollArea className="h-[calc(100vh-16rem)]">
+        <div className="pr-4 space-y-6">
+          {events.map((event) => (
+            <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150">
+              <div className="border-b border-border p-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-lg text-secondary font-display tracking-wider">{event.title}</h3>
+                  <div className="text-xs border border-border px-2 py-1">
+                    {new Date(event.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <div className="text-sm">{event.venue}</div>
+                  <div className="text-xs text-muted-foreground">{event.time}</div>
                 </div>
               </div>
-              <div className="mt-2">
-                <div className="text-sm">{event.venue}</div>
-                <div className="text-xs text-muted-foreground">{event.time}</div>
+              
+              <div className="p-4 border-b border-border">
+                <h4 className="text-xs mb-2 text-muted-foreground">FEATURING:</h4>
+                <ul className="text-xs space-y-1">
+                  {event.artists.map((artist, index) => (
+                    <li key={index} className="flex">
+                      <span className="text-primary mr-2">{`>`}</span>
+                      <span>{artist}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="p-4 text-xs text-muted-foreground">
+                {event.description}
               </div>
             </div>
-            
-            <div className="p-4 border-b border-border">
-              <h4 className="text-xs mb-2 text-muted-foreground">FEATURING:</h4>
-              <ul className="text-xs space-y-1">
-                {event.artists.map((artist, index) => (
-                  <li key={index} className="flex">
-                    <span className="text-primary mr-2">{`>`}</span>
-                    <span>{artist}</span>
-                  </li>
-                ))}
-              </ul>
+          ))}
+          
+          <div className="border border-primary p-4 mt-8">
+            <div className="text-sm">
+              SUBSCRIBE TO OUR MAILING LIST FOR EXCLUSIVE EVENT INVITATIONS
             </div>
-            
-            <div className="p-4 text-xs text-muted-foreground">
-              {event.description}
+            <div className="text-xs text-muted-foreground mt-2">
+              EVENTS@INTERLINKED-RECORDS.NET
             </div>
-          </div>
-        ))}
-        
-        <div className="border border-primary p-4 mt-8">
-          <div className="text-sm">
-            SUBSCRIBE TO OUR MAILING LIST FOR EXCLUSIVE EVENT INVITATIONS
-          </div>
-          <div className="text-xs text-muted-foreground mt-2">
-            EVENTS@INTERLINKED-RECORDS.NET
           </div>
         </div>
-      </div>
+      </ScrollArea>
     </div>
   );
 };

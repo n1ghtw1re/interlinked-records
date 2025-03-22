@@ -46,8 +46,9 @@ const MainLayout: React.FC = () => {
     <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
       <div className="scan-line"></div>
       <div className="static-overlay"></div>
+      <div className="green-burn"></div>
       
-      <div className="w-full max-w-6xl mx-auto my-8 flex">
+      <div className="w-full max-w-6xl mx-auto my-8 flex border border-primary p-2">
         <div className="w-64 border-r border-border">
           <div className="mb-8 px-4">
             <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>

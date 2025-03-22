@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const LinksContent: React.FC = () => {
   const links = [
@@ -39,41 +40,45 @@ const LinksContent: React.FC = () => {
   ];
 
   return (
-    <div className="max-h-[calc(100vh-16rem)] overflow-hidden">
+    <div>
       <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_LINKS</h2>
       
-      <div className="grid grid-cols-2 gap-6">
-        {links.map((category, index) => (
-          <div key={index} className="border border-border p-4">
-            <h3 className="text-sm text-secondary font-display tracking-wider mb-3">{category.category}</h3>
-            
-            <ul className="space-y-3">
-              {category.items.map((item, idx) => (
-                <li key={idx} className="group">
-                  <a 
-                    href={item.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center text-xs hover:text-primary transition-colors duration-150"
-                  >
-                    <Link className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
-                    <span>{item.label}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+      <ScrollArea className="h-[calc(100vh-16rem)]">
+        <div className="pr-4">
+          <div className="grid grid-cols-2 gap-6">
+            {links.map((category, index) => (
+              <div key={index} className="border border-border p-4">
+                <h3 className="text-sm text-secondary font-display tracking-wider mb-3">{category.category}</h3>
+                
+                <ul className="space-y-3">
+                  {category.items.map((item, idx) => (
+                    <li key={idx} className="group">
+                      <a 
+                        href={item.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-xs hover:text-primary transition-colors duration-150"
+                      >
+                        <Link className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                        <span>{item.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      
-      <div className="border border-border p-4 mt-6">
-        <h3 className="text-sm text-secondary font-display tracking-wider mb-3">CONTACT</h3>
-        <div className="text-xs space-y-2">
-          <p>GENERAL: INFO@INTERLINKED-RECORDS.NET</p>
-          <p>DEMOS: DEMOS@INTERLINKED-RECORDS.NET</p>
-          <p>PRESS: PRESS@INTERLINKED-RECORDS.NET</p>
+          
+          <div className="border border-border p-4 mt-6">
+            <h3 className="text-sm text-secondary font-display tracking-wider mb-3">CONTACT</h3>
+            <div className="text-xs space-y-2">
+              <p>GENERAL: INFO@INTERLINKED-RECORDS.NET</p>
+              <p>DEMOS: DEMOS@INTERLINKED-RECORDS.NET</p>
+              <p>PRESS: PRESS@INTERLINKED-RECORDS.NET</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </ScrollArea>
     </div>
   );
 };
