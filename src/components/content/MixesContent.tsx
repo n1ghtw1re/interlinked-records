@@ -2,8 +2,9 @@
 import React from 'react';
 import { Music2 } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { ContentProps } from '../MainLayout';
 
-const MixesContent: React.FC = () => {
+const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const mixes = [
     {
       id: 'MIX-001',
@@ -11,7 +12,9 @@ const MixesContent: React.FC = () => {
       artist: 'Void Protocol',
       duration: '74:23',
       date: '2023-12-02',
-      tags: ['Dub Techno', 'Ambient', 'Industrial']
+      tags: ['Dub Techno', 'Ambient', 'Industrial'],
+      embedUrl: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1224609325&color=%2346e62a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+      description: "Deep, resonant dub techno explorations from the underground. Void Protocol delivers a hypnotic journey through cavernous spaces and industrial landscapes."
     },
     {
       id: 'MIX-002',
@@ -39,6 +42,10 @@ const MixesContent: React.FC = () => {
     }
   ];
 
+  const handleMixClick = (mix: any) => {
+    setActiveContent('mix', mix);
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_DJ MIXES</h2>
@@ -46,7 +53,11 @@ const MixesContent: React.FC = () => {
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="pr-4 space-y-4">
           {mixes.map((mix) => (
-            <div key={mix.id} className="border border-border p-4 hover:border-primary transition-colors duration-150">
+            <div 
+              key={mix.id} 
+              className="border border-border p-4 hover:border-primary transition-colors duration-150 cursor-pointer"
+              onClick={() => handleMixClick(mix)}
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <div className="mr-4 border border-border p-2">

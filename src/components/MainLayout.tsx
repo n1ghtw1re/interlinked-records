@@ -7,11 +7,27 @@ import MixesContent from './content/MixesContent';
 import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
 
-export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links';
+export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'release' | 'mix';
+
+interface ReleaseData {
+  id: string;
+  artist: string;
+  title: string;
+  embedUrl?: string;
+  description?: string;
+}
+
+export interface ContentProps {
+  setActiveContent: (content: ContentType, data?: any) => void;
+  releaseData?: ReleaseData;
+  mixData?: any;
+}
 
 const MainLayout: React.FC = () => {
   const [activeContent, setActiveContent] = useState<ContentType>('about');
   const [glitchEffect, setGlitchEffect] = useState(false);
+  const [releaseData, setReleaseData] = useState<ReleaseData | null>(null);
+  const [mixData, setMixData] = useState<any>(null);
 
   // Randomly trigger glitch effects
   useEffect(() => {
@@ -25,20 +41,33 @@ const MainLayout: React.FC = () => {
     return () => clearInterval(glitchInterval);
   }, []);
 
+  const handleContentChange = (content: ContentType, data?: any) => {
+    setActiveContent(content);
+    if (content === 'release' && data) {
+      setReleaseData(data);
+    } else if (content === 'mix' && data) {
+      setMixData(data);
+    }
+  };
+
   const renderContent = () => {
     switch (activeContent) {
       case 'about':
-        return <AboutContent />;
+        return <AboutContent setActiveContent={handleContentChange} />;
       case 'discography':
-        return <DiscographyContent />;
+        return <DiscographyContent setActiveContent={handleContentChange} />;
       case 'mixes':
-        return <MixesContent />;
+        return <MixesContent setActiveContent={handleContentChange} />;
       case 'events':
-        return <EventsContent />;
+        return <EventsContent setActiveContent={handleContentChange} />;
       case 'links':
-        return <LinksContent />;
+        return <LinksContent setActiveContent={handleContentChange} />;
+      case 'release':
+        return <ReleaseDetail releaseData={releaseData} setActiveContent={handleContentChange} />;
+      case 'mix':
+        return <MixDetail mixData={mixData} setActiveContent={handleContentChange} />;
       default:
-        return <AboutContent />;
+        return <AboutContent setActiveContent={handleContentChange} />;
     }
   };
 
@@ -48,7 +77,7 @@ const MainLayout: React.FC = () => {
       <div className="static-overlay"></div>
       <div className="green-burn"></div>
       
-      <div className="w-full max-w-6xl mx-auto my-8 flex border border-primary p-2">
+      <div className="w-full max-w-6xl mx-auto my-8 flex border-2 border-primary p-2">
         <div className="w-64 border-r border-border">
           <div className="mb-8 px-4">
             <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
@@ -61,7 +90,7 @@ const MainLayout: React.FC = () => {
           
           <Navigation 
             activeContent={activeContent} 
-            setActiveContent={setActiveContent} 
+            setActiveContent={handleContentChange} 
           />
         </div>
         

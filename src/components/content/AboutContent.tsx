@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { ContentProps } from '../MainLayout';
 
-const AboutContent: React.FC = () => {
+const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_ABOUT</h2>
