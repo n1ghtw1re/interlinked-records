@@ -61,7 +61,7 @@ const EventsContent: React.FC = () => {
               <ul className="text-xs space-y-1">
                 {event.artists.map((artist, index) => (
                   <li key={index} className="flex">
-                    <span className="text-primary mr-2">></span>
+                    <span className="text-primary mr-2">{`>`}</span>
                     <span>{artist}</span>
                   </li>
                 ))}

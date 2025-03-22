@@ -20,19 +20,19 @@ const AboutContent: React.FC = () => {
         <h3 className="text-lg text-secondary mb-2 font-display tracking-wider">MANIFESTO</h3>
         <ul className="text-xs space-y-2">
           <li className="flex items-start">
-            <span className="text-primary mr-2">></span>
+            <span className="text-primary mr-2">{`>`}</span>
             <span>Sound is data. Data is corrupted. Corruption is creation.</span>
           </li>
           <li className="flex items-start">
-            <span className="text-primary mr-2">></span>
+            <span className="text-primary mr-2">{`>`}</span>
             <span>Against algorithmic curation. For human excavation.</span>
           </li>
           <li className="flex items-start">
-            <span className="text-primary mr-2">></span>
+            <span className="text-primary mr-2">{`>`}</span>
             <span>Hardware first. Software second. Soul always.</span>
           </li>
           <li className="flex items-start">
-            <span className="text-primary mr-2">></span>
+            <span className="text-primary mr-2">{`>`}</span>
             <span>The underground exists in parallel dimensions.</span>
           </li>
         </ul>
