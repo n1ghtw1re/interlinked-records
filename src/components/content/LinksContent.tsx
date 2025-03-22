@@ -9,7 +9,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       category: 'MUSIC PLATFORMS',
       items: [
-        { label: 'BANDCAMP', url: 'https://interlinked-records.bandcamp.com' },
+        { label: 'BANDCAMP', url: 'https://interlinkedai.bandcamp.com/' },
         { label: 'SOUNDCLOUD', url: 'https://soundcloud.com/interlinked-records' },
         { label: 'RESIDENT ADVISOR', url: 'https://ra.co/labels/interlinked' }
       ]
@@ -25,7 +25,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       category: 'AFFILIATED COLLECTIVES',
       items: [
-        { label: 'DEEP SPACE TRANSMISSIONS', url: 'https://deepspacetransmissions.net' },
+        { label: 'N1ghtw1re', url: 'https://n1ghtw1re.neocities.org/' },
         { label: 'CONCRETE FREQUENCY', url: 'https://concretefrequency.org' },
         { label: 'MODULAR RESEARCH LAB', url: 'https://modularresearchlab.com' }
       ]

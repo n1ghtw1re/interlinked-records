@@ -44,7 +44,7 @@ const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
           
           <div className="text-xs text-muted-foreground mt-6">
             FOR INQUIRIES: Interlinked@proton.me<br />
-            DISTRIBUTION: N1ghtw1re@proton.me
+            HACKTHEPLANET: N1ghtw1re@proton.me
           </div>
         </div>
       </ScrollArea>
