@@ -6,22 +6,24 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
-      id: 'IR-001',
+      id: 'INT-017',
       artist: 'ImVexd',
       title: 'Syntax of Shadows',
       format: 'Vinyl 12" + Digital',
-      year: '2023',
+      year: '2025',
       tracks: ['Neural Decay', 'Synaptic Drift', 'Memory Fragments', 'Cortex Malfunction'],
-      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3251650679/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/syntax-of-shadows">Syntax of Shadows by imVexd</a></iframe>',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3937841774/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/echoes-in-the-grid">Echoes in The Grid by Axi0m</a></iframe>',
       description: "Dive into the abyss with Syntax of Shadows, the latest release from ImVexd.\n\nThis dark ambient dub techno album is a 17-track odyssey through late-night code and clandestine circuits. This isn't just music; it's a soundtrack for the sleepless, the seekers, the rebels who rewrite reality while the world dreams.\n\nEach track pulses with the tension of midnight hacks, the hum of neon-lit silence, and the weight of knowing the next keystroke could change everything. It's the rhythm of liberation, encrypted in basslines and cloaked in atmosphere."
     },
     {
-      id: 'IR-002',
-      artist: 'Submerged Transmissions',
-      title: 'Pressure Zones',
+      id: 'INT-015',
+      artist: 'Axi0m',
+      title: 'Echoes in the Grid',
       format: 'Cassette + Digital',
       year: '2023',
-      tracks: ['Deep Sea Communication', 'Pressure Zones', 'Thalassophobia', 'Abyssal Plains']
+      tracks: ['Deep Sea Communication', 'Pressure Zones', 'Thalassophobia', 'Abyssal Plains'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3251650679/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/syntax-of-shadows">Syntax of Shadows by imVexd</a></iframe>',
+      description: "Immerse yourself in 16 tracks of chilled-out minimal lofi, layered with the soothing ambiance of rainy days and digital whispers. Perfect for coding marathons, late-night study sessions, or just unwinding with a cup of coffee."
     },
     {
       id: 'IR-003',
