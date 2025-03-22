@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['Space Mono', 'Courier New', 'monospace'],
+				display: ['VT323', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -84,11 +89,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'screen-flicker': {
+					'0%, 100%': { opacity: '1' },
+					'92%': { opacity: '0.95' },
+					'96%': { opacity: '0.90' }
+				},
+				'scan-line': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(100vh)' }
+				},
+				'glitch-text': {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'10%': { transform: 'translateX(-3px)' },
+					'20%': { transform: 'translateX(3px)' },
+					'30%': { transform: 'translateX(-3px)' },
+					'40%': { transform: 'translateX(3px)' }
+				},
+				'static': {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '100% 100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'screen-flicker': 'screen-flicker 6s infinite',
+				'scan-line': 'scan-line 8s linear infinite',
+				'glitch-text': 'glitch-text 0.5s ease-in-out',
+				'static': 'static 0.5s steps(10) infinite'
 			}
 		}
 	},

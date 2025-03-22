@@ -1,92 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=VT323&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 7%;
+    --foreground: 180 5% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 11%;
+    --card-foreground: 180 2% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 180 5% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 180 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 180 5% 20%;
+    --input: 180 5% 20%;
+    --ring: 120 100% 50%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0px;
   }
 }
 
@@ -96,6 +45,96 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+    cursor: default;
+  }
+
+  /* CRT screen effect */
+  .crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, 
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    z-index: 101;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  .scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 102;
+    pointer-events: none;
+    animation: scan-line 8s linear infinite;
+    opacity: 0.3;
+  }
+
+  .static-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/png;base64,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");
+    z-index: 103;
+    pointer-events: none;
+    opacity: 0.03;
+    animation: static 0.5s steps(10) infinite;
+  }
+
+  .glitch-text {
+    animation: glitch-text 3s ease-in-out infinite;
+    animation-delay: calc(var(--glitch-delay, 0) * 1s);
+  }
+
+  /* Specific animation on hover for elements */
+  .menu-item {
+    @apply relative px-4 py-2 border border-border transition-all duration-150;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu-item:hover, .menu-item.active {
+    @apply bg-muted text-primary;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  }
+
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background-color: hsl(var(--primary));
+    transition: height 0.15s ease-in-out;
+  }
+
+  .menu-item:hover::after, .menu-item.active::after {
+    height: 100%;
   }
 }
