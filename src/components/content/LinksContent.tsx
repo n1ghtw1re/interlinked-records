@@ -2,8 +2,9 @@
 import React from 'react';
 import { Link } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { ContentProps } from '../MainLayout';
 
-const LinksContent: React.FC = () => {
+const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const links = [
     {
       category: 'MUSIC PLATFORMS',

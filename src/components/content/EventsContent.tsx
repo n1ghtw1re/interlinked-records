@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { ContentProps } from '../MainLayout';
 
-const EventsContent: React.FC = () => {
+const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const events = [
     {
       id: '001',
