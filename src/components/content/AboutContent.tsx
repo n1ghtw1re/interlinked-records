@@ -11,13 +11,13 @@ const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="pr-4 space-y-6">
           <p className="text-sm leading-relaxed mb-4">
-            INTERLINKED RECORDS is an independent label founded in the digital underground, 
+            Based in Siem Reap, Cambodiai, INTERLINKED RECORDS is an independent label founded in the digital underground, 
             operating at the intersection of dub techno, industrial soundscapes, and gothic synth experiments.
           </p>
           
           <p className="text-sm leading-relaxed mb-4">
-            We specialize in limited edition vinyl pressings, cassette releases, and digital 
-            publications from artists working in the shadows of electronic music culture.
+            We specialize in creating unique soundscapes in a variety of genres. 
+            Our artists are free to experiment and to create their own voice.
           </p>
           
           <div className="border border-border p-4 my-6">
