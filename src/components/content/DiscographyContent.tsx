@@ -54,6 +54,16 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1919827054/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-13th-floor">The 13th Floor by Interlinked Records</a></iframe>',
       description: "The 13th Floor is descent into dark melodic grooves from TheDonStone."
+    },
+    {
+      id: 'INT-012',
+      artist: 'TheDonStone',
+      title: 'Total Recall',
+      format: 'Digital EP',
+      year: '2024',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=711447107/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/total-recall">Total Recall by Interlinked Records</a></iframe>',
+      description: "Total Recall is a hard pulse-pumping peak time techno EP."
     }
   ];
 
