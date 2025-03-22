@@ -16,30 +16,34 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       description: "Dive into the abyss with Syntax of Shadows, the latest release from ImVexd.\n\nThis dark ambient dub techno album is a 17-track odyssey through late-night code and clandestine circuits. This isn't just music; it's a soundtrack for the sleepless, the seekers, the rebels who rewrite reality while the world dreams.\n\nEach track pulses with the tension of midnight hacks, the hum of neon-lit silence, and the weight of knowing the next keystroke could change everything. It's the rhythm of liberation, encrypted in basslines and cloaked in atmosphere."
     },
     {
-      id: 'INT-015',
+      id: 'INT-016',
       artist: 'Axi0m',
       title: 'Echoes in the Grid',
       format: 'Cassette + Digital',
-      year: '2023',
+      year: '2025',
       tracks: ['Deep Sea Communication', 'Pressure Zones', 'Thalassophobia', 'Abyssal Plains'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3251650679/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/syntax-of-shadows">Syntax of Shadows by imVexd</a></iframe>',
       description: "Immerse yourself in 16 tracks of chilled-out minimal lofi, layered with the soothing ambiance of rainy days and digital whispers. Perfect for coding marathons, late-night study sessions, or just unwinding with a cup of coffee."
     },
     {
-      id: 'IR-003',
-      artist: 'Glass Structures',
-      title: 'Brutalist Architecture',
+      id: 'INT-015',
+      artist: 'TheDonStone',
+      title: 'Zero Theorem',
       format: 'Vinyl 12" + Digital',
-      year: '2023',
-      tracks: ['Concrete Formations', 'Steel Grid Systems', 'Raw Materials', 'Functional Spaces']
+      year: '2024',
+      tracks: ['Concrete Formations', 'Steel Grid Systems', 'Raw Materials', 'Functional Spaces'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1628666844/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/zero-theorem">Zero Theorem by Interlinked Records</a></iframe>',
+      description: "Abyssal grooves and hypnotic precision collide in Zero Theorem, where TheDonStone crafts a deep, dark minimal techno odyssey. JustFin strips it down further with a stark, minimalist remix that pulses like a machine on the edge of consciousness."
     },
     {
-      id: 'IR-004',
-      artist: 'Modular Ghost',
-      title: 'Patch Memory',
+      id: 'INT-014',
+      artist: 'TheDonStone',
+      title: 'Back To Mine',
       format: 'Digital EP',
       year: '2023',
-      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path']
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2917307920/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/back-to-mine">Back to Mine by Interlinked Records</a></iframe>',
+      description: "Back To Mine drifts through the hazy echoes of an all-night rave’s aftermath, where deep dub, distorted lofi, and submerged rhythms paint a world between exhaustion and euphoria. TheDonStone crafts a sonic comedown ritual—warm, warped, and lost in the glow of city lights at dawn."
     }
   ];
 
