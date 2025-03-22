@@ -6,10 +6,12 @@ import DiscographyContent from './content/DiscographyContent';
 import MixesContent from './content/MixesContent';
 import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
+import ReleaseDetail from './content/ReleaseDetail';
+import MixDetail from './content/MixDetail';
 
 export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'release' | 'mix';
 
-interface ReleaseData {
+export interface ReleaseData {
   id: string;
   artist: string;
   title: string;
