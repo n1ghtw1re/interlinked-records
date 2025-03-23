@@ -43,7 +43,7 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       year: '2024',
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2917307920/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/back-to-mine">Back to Mine by Interlinked Records</a></iframe>',
-      description: "Back To Mine drifts through the hazy echoes of an all-night rave’s aftermath, where deep dub, distorted lofi, and submerged rhythms paint a world between exhaustion and euphoria. TheDonStone crafts a sonic comedown ritual—warm, warped, and lost in the glow of city lights at dawn."
+      description: "Back To Mine drifts through the hazy echoes of an all-night rave's aftermath, where deep dub, distorted lofi, and submerged rhythms paint a world between exhaustion and euphoria. TheDonStone crafts a sonic comedown ritual—warm, warped, and lost in the glow of city lights at dawn."
     },
     {
       id: 'INT-013',
@@ -102,18 +102,6 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                 <div className="text-xs border border-border px-2 py-1">
                   {release.id}
                 </div>
-              </div>
-              
-              <div className="mt-3 pt-3 border-t border-border">
-                <h5 className="text-xs mb-2 text-muted-foreground">TRACKLIST:</h5>
-                <ul className="text-xs space-y-1">
-                  {release.tracks.map((track, index) => (
-                    <li key={index} className="flex">
-                      <span className="text-primary mr-2">{index + 1}.</span>
-                      <span>{track}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}
