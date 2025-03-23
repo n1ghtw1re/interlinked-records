@@ -93,7 +93,7 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       year: '2024',
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=717801621/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/hack-the-planet">Hack the Planet by Interlinked Records</a></iframe>',
-      description: "Lullaby Abyss is a departure from TheDonStone's usual style, as he explores the darker and deeper realms of sound. Inspired by EBM, goth, grunge, post-punk, and darkwave, Lullaby Abyss is a sonic journey that will take you to the edge of your emotions."
+      description: "Inspired by the cult classic, Hackers, Hack the Planet is a five track love letter to old school techno and house music."
     }
   ];
 
