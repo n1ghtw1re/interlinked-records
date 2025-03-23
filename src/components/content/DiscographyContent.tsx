@@ -104,6 +104,16 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3239485164/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/paagoda-cat-2">Paagoda Cat by Interlinked Records</a></iframe>',
       description: "This six track EP travels through melodic, deep, and minimal techno."
+    },
+    {
+      id: 'INT-007',
+      artist: 'TheDonStone',
+      title: 'The Remix',
+      format: 'Digital EP',
+      year: '2024',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1569542637/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-remix">The Remix by Interlinked Records</a></iframe>',
+      description: "A collection of seven old school hip hop tracks fused with modern afro, latin, and funk vibes"
     }
   ];
 
