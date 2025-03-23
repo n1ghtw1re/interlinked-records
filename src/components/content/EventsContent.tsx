@@ -2,8 +2,30 @@
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { ContentProps } from '../MainLayout';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
+  const weeklyEvents = [
+    {
+      id: 'weekly-1',
+      title: 'Sunday Sessions',
+      venue: 'Good Vibes, Siem Reap',
+      time: '18:00 - Late'
+    },
+    {
+      id: 'weekly-2',
+      title: 'Industry Night',
+      venue: 'XBar, Siem Reap',
+      time: 'Tuesday, 21:00 - Late'
+    },
+    {
+      id: 'weekly-3',
+      title: 'Mainroom',
+      venue: 'XBar',
+      time: 'Saturday, 22:00 - Late'
+    }
+  ];
+
   const events = [
     {
       id: '001',
@@ -40,6 +62,29 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="pr-4 space-y-6">
+          {/* Weekly Events Section */}
+          <Card className="bg-transparent border border-primary">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg text-primary font-display tracking-wider">WEEKLY EVENTS</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-3">
+                {weeklyEvents.map((event) => (
+                  <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150 p-3">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-md text-secondary font-display tracking-wider">{event.title}</h3>
+                      <div className="text-xs text-muted-foreground">{event.time}</div>
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">{event.venue}</div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Regular Events Section */}
+          <h3 className="text-lg text-primary font-display tracking-wider mt-8 mb-4">UPCOMING SPECIAL EVENTS</h3>
+          
           {events.map((event) => (
             <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150">
               <div className="border-b border-border p-4">
