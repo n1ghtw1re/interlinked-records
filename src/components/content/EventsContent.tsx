@@ -76,24 +76,24 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-display tracking-wider text-primary mb-4">_EVENTS</h2>
+      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_EVENTS</h2>
       
       <ScrollArea className="h-[calc(100vh-16rem)]">
-        <div className="pr-4 space-y-4">
+        <div className="pr-4 space-y-6">
           {/* Weekly Events Section */}
           <Card className="bg-transparent border border-primary">
-            <CardHeader className="pb-1 pt-3">
-              <CardTitle className="text-md sm:text-lg text-primary font-display tracking-wider">WEEKLY EVENTS</CardTitle>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg text-primary font-display tracking-wider">WEEKLY EVENTS</CardTitle>
             </CardHeader>
-            <CardContent className="pt-1 pb-3">
-              <div className="grid gap-2">
+            <CardContent>
+              <div className="grid gap-3">
                 {weeklyEvents.map((event) => (
-                  <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150 p-2">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
-                      <h3 className="text-sm sm:text-md text-secondary font-display tracking-wider mb-1 sm:mb-0">{event.title}</h3>
+                  <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150 p-3">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-md text-secondary font-display tracking-wider">{event.title}</h3>
                       <div className="text-xs text-muted-foreground">{event.time}</div>
                     </div>
-                    <div className="text-xs text-muted-foreground">{event.venue}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{event.venue}</div>
                   </div>
                 ))}
               </div>
@@ -101,14 +101,14 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
           </Card>
           
           {/* Regular Events Section */}
-          <h3 className="text-md sm:text-lg text-primary font-display tracking-wider mt-6 mb-3">UPCOMING SPECIAL EVENTS</h3>
+          <h3 className="text-lg text-primary font-display tracking-wider mt-8 mb-4">UPCOMING SPECIAL EVENTS</h3>
           
           {events.map((event) => (
             <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150">
-              <div className="border-b border-border p-3">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
-                  <h3 className="text-md sm:text-lg text-secondary font-display tracking-wider mb-1 sm:mb-0">{event.title}</h3>
-                  <div className="text-xs border border-border px-2 py-1 self-start">
+              <div className="border-b border-border p-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-lg text-secondary font-display tracking-wider">{event.title}</h3>
+                  <div className="text-xs border border-border px-2 py-1">
                     {new Date(event.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'short',
@@ -116,31 +116,31 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                     })}
                   </div>
                 </div>
-                <div className="mt-1">
+                <div className="mt-2">
                   <div className="text-sm">{event.venue}</div>
                   <div className="text-xs text-muted-foreground">{event.time}</div>
                 </div>
               </div>
               
-              <div className="p-3 border-b border-border">
+              <div className="p-4 border-b border-border">
                 <h4 className="text-xs mb-2 text-muted-foreground">FEATURING:</h4>
-                <div className="text-xs grid grid-cols-1 sm:grid-cols-2 gap-y-1">
+                <ul className="text-xs space-y-1">
                   {event.artists.map((artist, index) => (
-                    <div key={index} className="flex">
+                    <li key={index} className="flex">
                       <span className="text-primary mr-2">{`>`}</span>
                       <span>{artist}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               
-              <div className="p-3 text-xs text-muted-foreground">
+              <div className="p-4 text-xs text-muted-foreground">
                 {event.description}
               </div>
             </div>
           ))}
           
-          <div className="border border-primary p-3 mt-6">
+          <div className="border border-primary p-4 mt-8">
             <div className="text-sm">
               SUBSCRIBE TO OUR MAILING LIST FOR EXCLUSIVE EVENT INVITATIONS
             </div>
