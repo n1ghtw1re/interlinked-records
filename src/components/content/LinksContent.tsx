@@ -73,9 +73,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
           <div className="border border-border p-4 mt-6">
             <h3 className="text-sm text-secondary font-display tracking-wider mb-3">CONTACT</h3>
             <div className="text-xs space-y-2">
-              <p>GENERAL: INFO@INTERLINKED-RECORDS.NET</p>
-              <p>DEMOS: DEMOS@INTERLINKED-RECORDS.NET</p>
-              <p>PRESS: PRESS@INTERLINKED-RECORDS.NET</p>
+              <p>GENERAL: N1GHTW1RE@PROTON.ME</p>
             </div>
           </div>
         </div>
