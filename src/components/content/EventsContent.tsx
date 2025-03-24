@@ -3,8 +3,11 @@ import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { ContentProps } from '../MainLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
+  const isMobile = useIsMobile();
+  
   const weeklyEvents = [
     {
       id: 'weekly-1',
@@ -76,21 +79,21 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_EVENTS</h2>
+      <h2 className="text-xl md:text-2xl font-display tracking-wider text-primary mb-4 md:mb-6">_EVENTS</h2>
       
-      <ScrollArea className="h-[calc(100vh-16rem)]">
-        <div className="pr-4 space-y-6">
+      <ScrollArea className="h-[calc(100vh-20rem)] md:h-[calc(100vh-16rem)]">
+        <div className="pr-4 space-y-4 md:space-y-6">
           {/* Weekly Events Section */}
           <Card className="bg-transparent border border-primary">
             <CardHeader className="pb-2">
-              <CardTitle className="text-lg text-primary font-display tracking-wider">WEEKLY EVENTS</CardTitle>
+              <CardTitle className="text-md md:text-lg text-primary font-display tracking-wider">WEEKLY EVENTS</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-3">
+              <div className="grid gap-2 md:gap-3">
                 {weeklyEvents.map((event) => (
-                  <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150 p-3">
-                    <div className="flex justify-between items-start">
-                      <h3 className="text-md text-secondary font-display tracking-wider">{event.title}</h3>
+                  <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150 p-2 md:p-3">
+                    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between items-start'}`}>
+                      <h3 className="text-sm md:text-md text-secondary font-display tracking-wider">{event.title}</h3>
                       <div className="text-xs text-muted-foreground">{event.time}</div>
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">{event.venue}</div>
@@ -101,14 +104,14 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
           </Card>
           
           {/* Regular Events Section */}
-          <h3 className="text-lg text-primary font-display tracking-wider mt-8 mb-4">UPCOMING SPECIAL EVENTS</h3>
+          <h3 className="text-md md:text-lg text-primary font-display tracking-wider mt-6 md:mt-8 mb-3 md:mb-4">UPCOMING SPECIAL EVENTS</h3>
           
           {events.map((event) => (
             <div key={event.id} className="border border-border hover:border-primary transition-colors duration-150">
-              <div className="border-b border-border p-4">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-lg text-secondary font-display tracking-wider">{event.title}</h3>
-                  <div className="text-xs border border-border px-2 py-1">
+              <div className="border-b border-border p-3 md:p-4">
+                <div className={`flex ${isMobile ? 'flex-col' : 'justify-between items-start'}`}>
+                  <h3 className="text-md md:text-lg text-secondary font-display tracking-wider">{event.title}</h3>
+                  <div className="text-xs border border-border px-2 py-1 mt-1 md:mt-0 inline-block">
                     {new Date(event.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'short',
@@ -122,9 +125,9 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                 </div>
               </div>
               
-              <div className="p-4 border-b border-border">
+              <div className="p-3 md:p-4 border-b border-border">
                 <h4 className="text-xs mb-2 text-muted-foreground">FEATURING:</h4>
-                <ul className="text-xs space-y-1">
+                <ul className={`text-xs ${isMobile && event.artists.length > 4 ? 'grid grid-cols-2 gap-x-2' : 'space-y-1'}`}>
                   {event.artists.map((artist, index) => (
                     <li key={index} className="flex">
                       <span className="text-primary mr-2">{`>`}</span>
@@ -134,14 +137,14 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                 </ul>
               </div>
               
-              <div className="p-4 text-xs text-muted-foreground">
+              <div className="p-3 md:p-4 text-xs text-muted-foreground">
                 {event.description}
               </div>
             </div>
           ))}
           
-          <div className="border border-primary p-4 mt-8">
-            <div className="text-sm">
+          <div className="border border-primary p-3 md:p-4 mt-6 md:mt-8">
+            <div className="text-xs md:text-sm">
               SUBSCRIBE TO OUR MAILING LIST FOR EXCLUSIVE EVENT INVITATIONS
             </div>
             <div className="text-xs text-muted-foreground mt-2">
