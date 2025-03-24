@@ -8,6 +8,16 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const mixes = [
     {
       id: 'MIX-001',
+      title: 'SONA 003 - Dark Disco',
+      artist: 'TheDonStone',
+      duration: '62:00',
+      date: '2024-09',
+      tags: ['Dark Disco', 'Electro', 'Goth Techno'],
+      embedUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/AY3U5PwS2-c?si=QLkWUwZQ7YXXymTe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      description: "Welcome to the third chapter of the SONA mix series, where TheDonStone takes the sonic experience to unprecedented heights. This installment plunges listeners into a relentless fusion of dark disco, underground electro, minimal techno, and goth-inspired EBM. Breaking free from the ordinary, this week’s mix demands attention with pulsating beats and electrifying energy, setting the stage for an immersive auditory adventure."
+    },
+    {
+      id: 'MIX-002',
       title: 'Subterranean Frequencies',
       artist: 'Void Protocol',
       duration: '74:23',
@@ -17,29 +27,25 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       description: "Deep, resonant dub techno explorations from the underground. Void Protocol delivers a hypnotic journey through cavernous spaces and industrial landscapes."
     },
     {
-      id: 'MIX-002',
-      title: 'Reverberant Spaces',
-      artist: 'Glass Structures',
-      duration: '63:14',
-      date: '2023-10-15',
-      tags: ['Atmospheric', 'Techno', 'Experimental']
-    },
-    {
       id: 'MIX-003',
-      title: 'Nocturnal Transmissions',
-      artist: 'Signal Path',
-      duration: '58:47',
-      date: '2023-09-01',
-      tags: ['IDM', 'Breakbeat', 'Electro']
+      title: 'Subterranean Frequencies',
+      artist: 'Void Protocol',
+      duration: '74:23',
+      date: '2023-12-02',
+      tags: ['Dub Techno', 'Ambient', 'Industrial'],
+      embedUrl: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1224609325&color=%2346e62a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+      description: "Deep, resonant dub techno explorations from the underground. Void Protocol delivers a hypnotic journey through cavernous spaces and industrial landscapes."
     },
     {
       id: 'MIX-004',
-      title: 'Modular Explorations',
-      artist: 'Frequency Modulator',
-      duration: '67:32',
-      date: '2023-07-22',
-      tags: ['Experimental', 'Ambient', 'Noise']
-    }
+      title: 'Subterranean Frequencies',
+      artist: 'Void Protocol',
+      duration: '74:23',
+      date: '2023-12-02',
+      tags: ['Dub Techno', 'Ambient', 'Industrial'],
+      embedUrl: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1224609325&color=%2346e62a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+      description: "Deep, resonant dub techno explorations from the underground. Void Protocol delivers a hypnotic journey through cavernous spaces and industrial landscapes."
+    },
   ];
 
   const handleMixClick = (mix: any) => {
