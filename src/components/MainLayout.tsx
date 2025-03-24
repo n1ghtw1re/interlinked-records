@@ -74,31 +74,35 @@ const MainLayout: React.FC = () => {
   };
 
   return (
-    <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
+    <div className={`crt min-h-screen flex flex-col ${glitchEffect ? 'animate-glitch-text' : ''}`}>
       <div className="scan-line"></div>
       <div className="static-overlay"></div>
       <div className="green-burn"></div>
       
-      <div className="w-full max-w-6xl mx-auto my-8 flex border-2 border-primary p-2">
-        <div className="w-64 border-r border-border">
-          <div className="mb-8 px-4">
-            <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
-              INTERLINKED
-            </h1>
-            <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
-              RECORDS
-            </h2>
+      <div className="w-full max-w-6xl mx-auto my-4 sm:my-8 flex flex-col border-2 border-primary p-2">
+        <div className="flex flex-col sm:flex-row">
+          {/* Title and Navigation Section */}
+          <div className="w-full sm:w-64 border-b sm:border-b-0 sm:border-r border-border">
+            <div className="mb-4 px-4">
+              <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
+                INTERLINKED
+              </h1>
+              <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
+                RECORDS
+              </h2>
+            </div>
+            
+            <Navigation 
+              activeContent={activeContent} 
+              setActiveContent={handleContentChange} 
+            />
           </div>
           
-          <Navigation 
-            activeContent={activeContent} 
-            setActiveContent={handleContentChange} 
-          />
+          {/* Content Area */}
+          <main className="flex-1 p-4 sm:p-8 overflow-hidden animate-screen-flicker">
+            {renderContent()}
+          </main>
         </div>
-        
-        <main className="flex-1 p-8 overflow-hidden animate-screen-flicker">
-          {renderContent()}
-        </main>
       </div>
     </div>
   );

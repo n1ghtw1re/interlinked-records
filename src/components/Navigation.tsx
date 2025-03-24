@@ -19,23 +19,23 @@ const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent
 
   return (
     <nav className="w-full">
-      <ul className="space-y-2">
+      <div className="flex flex-row sm:flex-col overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0">
         {menuItems.map((item) => (
-          <li key={item.id}>
+          <div key={item.id} className="flex-shrink-0 sm:w-full mr-2 sm:mr-0 sm:mb-2">
             <button
               onClick={() => setActiveContent(item.id as ContentType)}
-              className={`menu-item w-full text-left flex items-center gap-2 text-sm ${
+              className={`menu-item w-full text-left flex items-center gap-2 text-sm whitespace-nowrap sm:whitespace-normal ${
                 activeContent === item.id ? 'active' : ''
               }`}
             >
               {item.icon}
               <span className="font-mono">{item.label}</span>
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
       
-      <div className="mt-8 px-4 pt-4 border-t border-border">
+      <div className="hidden sm:block mt-8 px-4 pt-4 border-t border-border">
         <p className="text-xs text-muted-foreground mt-4">
           EST. 2023<br />
           UNDERGROUND COLLECTIVE<br />
