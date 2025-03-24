@@ -34,7 +34,8 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       category: 'RADIO SHOWS',
       items: [
-        { label: 'N1GHTW1RE YOUTUBE', url: 'https://rinse.fm' },
+        { label: 'N1GHTW1RE YOUTUBE', url: 'https://www.youtube.com/@N1ghtw1re' },
+        { label: 'SONA DJ MIX SERIES', url: 'https://youtu.be/L-E95UOLK3Y?si=I6Ebmey2yfdQZHaP' },
         { label: 'CAMBODIA COMMUNITY RADIO', url: 'https://www.youtube.com/@CambodiaCommunityRadio' },
       ]
     }
