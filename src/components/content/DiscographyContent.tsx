@@ -119,7 +119,12 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       title: 'The Edits',
       format: 'Digital EP',
       year: '2023',
+<<<<<<< HEAD
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1589101894/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-edits">The Edits by Interlinked Records</a></iframe>',
+=======
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1589101894/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-edits">The Edits by Interlinked Records</a></iframe>',
+>>>>>>> fce099026b3d32f4249a5550fd15b40bb84ae75f
       description: "A six track collection of undergroudn trap and hip-hop remixes."
     },
     {

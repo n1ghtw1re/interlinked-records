@@ -10,7 +10,7 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       id: 'weekly-1',
       title: 'Sunday Sessions',
       venue: 'Good Vibes, Siem Reap',
-      time: '18:00 - Late'
+      time: '16:00 - Late'
     },
     {
       id: 'weekly-2',
