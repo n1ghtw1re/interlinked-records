@@ -12,7 +12,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent
   const menuItems = [
     { id: 'about', label: 'ABOUT', icon: <Disc className="w-4 h-4" /> },
     { id: 'discography', label: 'DISCOGRAPHY', icon: <Music2 className="w-4 h-4" /> },
-    { id: 'mixes', label: 'MIXES', icon: <Headphones className="w-4 h-4" /> },
+    { id: 'mixes', label: 'DJ MIXES', icon: <Headphones className="w-4 h-4" /> },
     { id: 'events', label: 'EVENTS', icon: <ArrowRight className="w-4 h-4" /> },
     { id: 'links', label: 'LINKS', icon: <Link className="w-4 h-4" /> },
   ];
