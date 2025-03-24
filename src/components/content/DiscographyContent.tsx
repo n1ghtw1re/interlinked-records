@@ -114,7 +114,67 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1569542637/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-remix">The Remix by Interlinked Records</a></iframe>',
       description: "A collection of seven old school hip hop tracks fused with modern afro, latin, and funk vibes"
-    }
+    },
+    {
+      id: 'INT-006',
+      artist: 'TheDonStone',
+      title: 'Baseline',
+      format: 'Digital EP',
+      year: '2024',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3367805544/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/baseline">Baseline by Interlinked Records</a></iframe>',
+      description: "Baseline is a seven track EP of VIP drum & bass edits produced by TheDonStone."
+    },
+    {
+      id: 'INT-005',
+      artist: 'TheDonStone',
+      title: 'The Edits,'
+      format: 'Digital EP',
+      year: '2023',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1589101894/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-edits">The Edits by Interlinked Records</a></iframe>',
+      description: "A six track collection of undergroudn trap and hip-hop remixes."
+    },
+    {
+      id: 'INT-004',
+      artist: 'TheDonStone',
+      title: 'Interlinked,'
+      format: 'Digital EP',
+      year: '2023',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2263959784/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/interlinked">Interlinked by Interlinked Records</a></iframe>',
+      description: "A five track journey through deep melodic techno and house music."
+    },
+    {
+      id: 'INT-003',
+      artist: 'Future Flow',
+      title: 'Trapped in Tranquility',
+      format: 'Digital EP',
+      year: '2023',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=973758966/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/future-flow-trapped-in-tranquility">Future Flow - Trapped In Tranquility by Future Flow</a></iframe>',
+      description: "With a blend of underground hip hop beats, chill out, and lo-fi sounds, Trapped in Tranquility is a masterful fusion of genres that defies categorization. Future Flow's music is a testament to the incredible things that can be achieved when humans and machines work together in harmony. It is a reminder that the power of technology can be harnessed to create something truly beautiful and meaningful."
+    },
+    {
+      id: 'INT-002',
+      artist: 'TheDonStone',
+      title: 'Dissco,
+      format: 'Digital EP',
+      year: '2014',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3098653871/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/dissco">Dissco by TheDonStone</a></iframe>',
+      description: "Spanning a decade's worth of music, Dissco collects 13 remixes and mashups from TheDonStone. Featuring house, disco, and indie dance vibes, every track is dancefloor ready."
+    },
+    {
+      id: 'INT-001',
+      artist: 'TheDonStone',
+      title: 'The Reboot,
+      format: 'Digital EP',
+      year: '2012',
+      tracks: ['CV Interface', 'Voltage Controlled', 'Patch Memory', 'Signal Path'],
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2714174206/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/the-reboot-originals">The Reboot : Originals by TheDonStone</a></iframe>',
+      description: "Remember when dubstep was cool? So do we. TheDonStone delivers thirteen hard hitting grimey dubstep productions for those memorable nights on the dancefloor. "
+    },
   ];
 
   const handleReleaseClick = (release: any) => {
