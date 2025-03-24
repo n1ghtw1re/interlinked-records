@@ -21,7 +21,7 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       id: 'weekly-3',
       title: 'Mainroom',
-      venue: 'XBar',
+      venue: 'XBar, Siem Reap',
       time: 'Saturday, 22:00 - Late'
     }
   ];
@@ -29,29 +29,47 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const events = [
     {
       id: '001',
-      title: 'SUBTERRANEAN FREQUENCIES',
-      date: '2023-12-15',
-      venue: 'The Vault, Berlin',
-      artists: ['Void Protocol', 'Modular Ghost', 'Glass Structures'],
-      description: 'Deep dub techno and experimental electronics in an underground concrete space.',
-      time: '23:00 - 08:00'
+      title: 'Graham Gold & Guests @ Cheers',
+      date: '2025-03-29',
+      venue: 'Cheers Pub Street, Siem Reap',
+      artists: ['Graham Gold', 'TheDonStone', 'Heuristic'],
+      description: 'Journey through melodic and europhoic trance in the heart of Siem Reap.',
+      time: '23:00 - 05:00'
     },
     {
       id: '002',
-      title: 'HARDWARE SESSIONS',
-      date: '2024-01-20',
-      venue: 'Circuit Laboratory, London',
-      artists: ['Signal Path', 'Frequency Modulator', 'Analog Interface'],
-      description: 'Live hardware jams and modular synthesis performances.',
-      time: '21:00 - 03:00'
+      title: 'Sunday at Soujorner',
+      date: '2025-03-30',
+      venue: 'Sojourner House, Siem Reap',
+      artists: ['Graham Gold', 'TheDonStone', 'Heuristic'],
+      description: 'VIP Sunday brunch pool party with deep house vibes.',
+      time: '12:00 - 01:00'
     },
     {
       id: '003',
-      title: 'INTERLINKED SHOWCASE',
-      date: '2024-02-10',
-      venue: 'Industrial Complex, Detroit',
-      artists: ['Full label roster', 'Special guests TBA'],
-      description: 'Label showcase featuring new releases and special collaborative performances.',
+      title: 'Angkor Bliss Khmer New Year Celebration',
+      date: '2025-04-14',
+      venue: 'Angkor Bliss, Siem Reap',
+      artists: ['TheDonStone', 'Braythedon', 'DEL30', 'Goddamn Kiddo', 'Maximillian', 'Roka', 'Strangefruit', 'Jam-Cha'],
+      description: 'Celebrating Khmer New Year with an all-day, all-night rave in the jungles of Siem Reap.',
+      time: '18:00 - 08:00'
+    },
+    {
+      id: '004',
+      title: 'Paul Oakenfold @ Chew & Bash',
+      date: '2025-04-26',
+      venue: 'Chew & Bash, Phnom Penh',
+      artists: ['Paul Oakenfold'],
+      description: 'In Search of Sunrise in Siem Reap featuring Paul Oakenfold & guests.',
+      time: '22:00 - 06:00'
+    },
+    {
+      id: '005',
+      title: 'Paul Oakenfold @ The Labyrinth',
+      date: '2025-04-30',
+      venue: 'The Labyrinth, Siem Reap',
+      artists: ['Paul Oakenfold', 'TheDonStone', 'Braythedon'],
+      description: 'In Search of Sunrise in Siem Reap featuring Paul Oakenfold & guests.',
       time: '22:00 - 06:00'
     }
   ];
