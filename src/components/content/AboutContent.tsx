@@ -22,7 +22,7 @@ const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
 
           <p className="text-sm leading-relaxed mb-4">
             Working with the N1ghtw1re collective, Interlinked is dedicated to pushing 
-            boundarires and creating a free and united world for everyone. 
+            boundarires and creating a free and united dancefloor for everyone. 
           </p>
           
           <div className="border border-border p-4 my-6">
