@@ -19,7 +19,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       category: 'Social Media',
       items: [
-        { label: 'FACEBOOK', url: 'https://hardwax.com' },
+        { label: 'FACEBOOK', url: 'https://www.facebook.com/interlinkedai' },
         { label: 'RESIDENT ADVISOR', url: 'https://ra.co/labels/23417' },
         { label: 'YOUTUBE', url: 'https://www.youtube.com/@the-don-stone' }
       ]
