@@ -120,7 +120,7 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
         </div>
       
         <div className="text-xs text-muted-foreground mt-6">
-          ALL MIXES AVAILABLE FOR STREAMING AT SOUNDCLOUD.COM/INTERLINKED-RECORDS
+        Against the dark, a tall white fountain played.
         </div>
       </ScrollArea>
     </div>
