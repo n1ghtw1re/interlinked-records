@@ -48,7 +48,7 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_DJ MIXES</h2>
+      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_MIXES</h2>
       
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="pr-4 space-y-4">
