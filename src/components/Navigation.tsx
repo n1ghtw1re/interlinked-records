@@ -2,6 +2,7 @@
 import React from 'react';
 import { ContentType } from './MainLayout';
 import { Disc, Headphones, Link, Music2, ArrowRight } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface NavigationProps {
   activeContent: ContentType;
@@ -9,6 +10,8 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent }) => {
+  const isMobile = useIsMobile();
+  
   const menuItems = [
     { id: 'about', label: 'ABOUT', icon: <Disc className="w-4 h-4" /> },
     { id: 'discography', label: 'DISCOGRAPHY', icon: <Music2 className="w-4 h-4" /> },
@@ -24,63 +27,67 @@ const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent
   return (
     <nav className="w-full">
       {/* Mobile layout (two rows) */}
-      <div className="flex flex-col sm:hidden">
-        <div className="flex justify-center mb-1">
-          {firstRowItems.map((item) => (
-            <div key={item.id} className="flex-1 mx-1">
-              <button
-                onClick={() => setActiveContent(item.id as ContentType)}
-                className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
-                  activeContent === item.id ? 'active' : ''
-                }`}
-              >
-                {item.icon}
-                <span className="font-mono">{item.label}</span>
-              </button>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center">
-          {secondRowItems.map((item) => (
-            <div key={item.id} className="flex-1 mx-1">
-              <button
-                onClick={() => setActiveContent(item.id as ContentType)}
-                className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
-                  activeContent === item.id ? 'active' : ''
-                }`}
-              >
-                {item.icon}
-                <span className="font-mono">{item.label}</span>
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Desktop layout (column) */}
-      <div className="hidden sm:flex sm:flex-col">
-        {menuItems.map((item) => (
-          <div key={item.id} className="sm:w-full sm:mb-2">
-            <button
-              onClick={() => setActiveContent(item.id as ContentType)}
-              className={`menu-item w-full text-left flex items-center gap-2 text-sm ${
-                activeContent === item.id ? 'active' : ''
-              }`}
-            >
-              {item.icon}
-              <span className="font-mono">{item.label}</span>
-            </button>
+      {isMobile ? (
+        <div className="flex flex-col">
+          <div className="flex justify-center mb-1">
+            {firstRowItems.map((item) => (
+              <div key={item.id} className="flex-1 mx-1">
+                <button
+                  onClick={() => setActiveContent(item.id as ContentType)}
+                  className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
+                    activeContent === item.id ? 'active' : ''
+                  }`}
+                >
+                  {item.icon}
+                  <span className="font-mono">{item.label}</span>
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+          <div className="flex justify-center">
+            {secondRowItems.map((item) => (
+              <div key={item.id} className="flex-1 mx-1">
+                <button
+                  onClick={() => setActiveContent(item.id as ContentType)}
+                  className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
+                    activeContent === item.id ? 'active' : ''
+                  }`}
+                >
+                  {item.icon}
+                  <span className="font-mono">{item.label}</span>
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        /* Desktop layout (column) - restored to original */
+        <div className="flex flex-col">
+          {menuItems.map((item) => (
+            <div key={item.id} className="w-full mb-2">
+              <button
+                onClick={() => setActiveContent(item.id as ContentType)}
+                className={`menu-item w-full text-left flex items-center gap-2 text-sm ${
+                  activeContent === item.id ? 'active' : ''
+                }`}
+              >
+                {item.icon}
+                <span className="font-mono">{item.label}</span>
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
       
-      <div className="hidden sm:block mt-8 px-4 pt-4 border-t border-border">
-        <p className="text-xs text-muted-foreground mt-4">
-          EST. 2023<br />
-          UNDERGROUND COLLECTIVE<br />
-          0x3F2A4C9D8E1B7F
-        </p>
-      </div>
+      {!isMobile && (
+        <div className="mt-8 px-4 pt-4 border-t border-border">
+          <p className="text-xs text-muted-foreground mt-4">
+            EST. 2023<br />
+            UNDERGROUND COLLECTIVE<br />
+            0x3F2A4C9D8E1B7F
+          </p>
+        </div>
+      )}
     </nav>
   );
 };

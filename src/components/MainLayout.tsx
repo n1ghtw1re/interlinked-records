@@ -8,6 +8,7 @@ import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
 import ReleaseDetail from './content/ReleaseDetail';
 import MixDetail from './content/MixDetail';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'release' | 'mix';
 
@@ -30,6 +31,7 @@ const MainLayout: React.FC = () => {
   const [glitchEffect, setGlitchEffect] = useState(false);
   const [releaseData, setReleaseData] = useState<ReleaseData | null>(null);
   const [mixData, setMixData] = useState<any>(null);
+  const isMobile = useIsMobile();
 
   // Randomly trigger glitch effects
   useEffect(() => {
@@ -83,23 +85,44 @@ const MainLayout: React.FC = () => {
         <div className="flex flex-col">
           {/* Title and Navigation Section */}
           <div className="w-full border-b border-border pb-2">
-            <div className="flex flex-col sm:flex-row">
-              <div className="px-4 mb-2 sm:mb-0 sm:w-64">
-                <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
-                  INTERLINKED
-                </h1>
-                <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
-                  RECORDS
-                </h2>
+            {isMobile ? (
+              // Mobile layout (header with nav below)
+              <div className="flex flex-col">
+                <div className="px-4 mb-2">
+                  <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
+                    INTERLINKED
+                  </h1>
+                  <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
+                    RECORDS
+                  </h2>
+                </div>
+                <div className="w-full">
+                  <Navigation 
+                    activeContent={activeContent} 
+                    setActiveContent={handleContentChange} 
+                  />
+                </div>
               </div>
-              
-              <div className="flex-1">
-                <Navigation 
-                  activeContent={activeContent} 
-                  setActiveContent={handleContentChange} 
-                />
+            ) : (
+              // Desktop layout (side-by-side) - restored to original
+              <div className="flex flex-row">
+                <div className="px-4 mb-2 sm:mb-0 sm:w-64">
+                  <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
+                    INTERLINKED
+                  </h1>
+                  <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
+                    RECORDS
+                  </h2>
+                </div>
+                
+                <div className="flex-1">
+                  <Navigation 
+                    activeContent={activeContent} 
+                    setActiveContent={handleContentChange} 
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </div>
           
           {/* Content Area */}
@@ -110,11 +133,13 @@ const MainLayout: React.FC = () => {
       </div>
       
       {/* Mobile footer info */}
-      <div className="sm:hidden w-full max-w-6xl mx-auto p-4 text-center">
-        <p className="text-xs text-muted-foreground">
-          EST. 2023 | UNDERGROUND COLLECTIVE | 0x3F2A4C9D8E1B7F
-        </p>
-      </div>
+      {isMobile && (
+        <div className="w-full max-w-6xl mx-auto p-4 text-center">
+          <p className="text-xs text-muted-foreground">
+            EST. 2023 | UNDERGROUND COLLECTIVE | 0x3F2A4C9D8E1B7F
+          </p>
+        </div>
+      )}
     </div>
   );
 };
