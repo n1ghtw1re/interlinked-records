@@ -6,6 +6,15 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
+      id: 'INT-018',
+      artist: 'AnticPanic',
+      title: 'Microdose Reality',
+      format: 'Digital EP',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3357869839/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/microdose-reality">Microdose Reality by AnticPanic</a></iframe>',
+      description: "Microdose Reality isn’t here to hold your hand—it’s here to rip the floor out from under you. Four relentless underground techno transmissions, each one a dose of raw, distorted energy designed to fracture the illusion and pull you straight into the void. No rules, no escape—just the pulse, the pressure, and the moment where reality finally glitches beyond repair."
+    },
+    {
       id: 'INT-017',
       artist: 'ImVexd',
       title: 'Syntax of Shadows',
@@ -27,7 +36,7 @@ const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       id: 'INT-015',
       artist: 'TheDonStone',
       title: 'Zero Theorem',
-      format: 'Digital Signal, Streaming',
+      format: 'Digital Signle, Streaming',
       year: '2024',
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1628666844/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/zero-theorem">Zero Theorem by Interlinked Records</a></iframe>',
       description: "Abyssal grooves and hypnotic precision collide in Zero Theorem, where TheDonStone crafts a deep, dark minimal techno odyssey. JustFin strips it down further with a stark, minimalist remix that pulses like a machine on the edge of consciousness."

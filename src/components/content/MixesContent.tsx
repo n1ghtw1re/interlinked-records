@@ -29,7 +29,7 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       id: 'MIX-003',
       title: 'SONA 001 - Dark Disco',
-      artist: 'Void Protocol',
+      artist: 'TheDonStone',
       duration: '74:23',
       date: '2023-12-02',
       tags: ['Dark Disco', 'Acid Techno', 'Hypnotic Techno'],
