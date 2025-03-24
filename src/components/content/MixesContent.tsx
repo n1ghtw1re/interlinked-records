@@ -18,13 +18,13 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     },
     {
       id: 'MIX-002',
-      title: 'Subterranean Frequencies',
-      artist: 'Void Protocol',
-      duration: '74:23',
-      date: '2023-12-02',
-      tags: ['Dub Techno', 'Ambient', 'Industrial'],
-      embedUrl: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1224609325&color=%2346e62a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-      description: "Deep, resonant dub techno explorations from the underground. Void Protocol delivers a hypnotic journey through cavernous spaces and industrial landscapes."
+      title: 'SONA 002 - Hard Techno',
+      artist: 'TheDonStone',
+      duration: '60:00',
+      date: '2024-03',
+      tags: ['Hard Techno', 'Peak-Time Techno', 'Driving Techno'],
+      embedUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/iKUTZUrcF8E?si=WI7griDqmfkkid95" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      description: "Drenched in the spirit of Berlin's warehouse techno and the clandestine allure of underground raves, the vibe of SONA Episode 2 is an invitation to the raw, unfiltered essence of the techno scene. TheDonStone, drawing upon his extensive experience as a DJ, producer, and event organizer, curates a selection that transcends boundaries, seamlessly weaving together tracks by acclaimed artists like Amelie Lens, Ann Clue, Mayfie, Uncertain, Beneti, and others. Each beat serves as a building block, constructing a sonic architecture that propels the listener into a realm where time stands still, and the dance floor becomes a conduit for collective euphoria."
     },
     {
       id: 'MIX-003',
