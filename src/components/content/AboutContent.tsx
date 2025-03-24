@@ -19,6 +19,11 @@ const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
             We specialize in creating unique soundscapes in a variety of genres. 
             Our artists are free to experiment and to create their own voice.
           </p>
+
+          <p className="text-sm leading-relaxed mb-4">
+            Working with the N1ghtw1re collective, Interlinked is dedicated to pushing 
+            boundarires and creating a free and united world for everyone. 
+          </p>
           
           <div className="border border-border p-4 my-6">
             <h3 className="text-lg text-secondary mb-2 font-display tracking-wider">MANIFESTO</h3>
@@ -43,8 +48,7 @@ const AboutContent: React.FC<ContentProps> = ({ setActiveContent }) => {
           </div>
           
           <div className="text-xs text-muted-foreground mt-6">
-            FOR INQUIRIES: Interlinked@proton.me<br />
-            HACKTHEPLANET: N1ghtw1re@proton.me
+            FOR INQUIRIES: N1GHTW1RE@PROTON.ME<br />
           </div>
         </div>
       </ScrollArea>
