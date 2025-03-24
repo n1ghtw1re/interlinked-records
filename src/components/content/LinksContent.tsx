@@ -11,31 +11,31 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       items: [
         { label: 'BANDCAMP', url: 'https://interlinkedai.bandcamp.com/' },
         { label: 'SOUNDCLOUD', url: 'https://soundcloud.com/interlinked-records' },
-        { label: 'RESIDENT ADVISOR', url: 'https://ra.co/labels/interlinked' }
+        { label: 'SPOTIFY', url: 'https://open.spotify.com/playlist/5RdjzDZl8I6aPaI4ZnWOaN?si=jpAvwLatTCG3br7-wPhjUw' },
+        { label: 'BEATPORT', url: 'https://www.beatport.com/label/interlinked/120134' }
+        
       ]
     },
     {
-      category: 'DISTRIBUTION',
+      category: 'Social Media',
       items: [
-        { label: 'HARDWAX', url: 'https://hardwax.com' },
-        { label: 'BOOMKAT', url: 'https://boomkat.com' },
-        { label: 'JUNO RECORDS', url: 'https://junorecords.com' }
+        { label: 'FACEBOOK', url: 'https://hardwax.com' },
+        { label: 'RESIDENT ADVISOR', url: 'https://ra.co/labels/23417' },
+        { label: 'YOUTUBE', url: 'https://www.youtube.com/@the-don-stone' }
       ]
     },
     {
       category: 'AFFILIATED COLLECTIVES',
       items: [
-        { label: 'N1ghtw1re', url: 'https://n1ghtw1re.neocities.org/' },
-        { label: 'CONCRETE FREQUENCY', url: 'https://concretefrequency.org' },
-        { label: 'MODULAR RESEARCH LAB', url: 'https://modularresearchlab.com' }
+        { label: 'N1GHTW1RE', url: 'https://n1ghtw1re.neocities.org/' },
+        { label: 'THEDONSTONE', url: 'https://thedonstone.com/' }
       ]
     },
     {
       category: 'RADIO SHOWS',
       items: [
-        { label: 'RINSE FM', url: 'https://rinse.fm' },
-        { label: 'NTS RADIO', url: 'https://nts.live' },
-        { label: 'THE WIRE', url: 'https://thewire.co.uk' }
+        { label: 'N1GHTW1RE YOUTUBE', url: 'https://rinse.fm' },
+        { label: 'CAMBODIA COMMUNITY RADIO', url: 'https://www.youtube.com/@CambodiaCommunityRadio' },
       ]
     }
   ];
