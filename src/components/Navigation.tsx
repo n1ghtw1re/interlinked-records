@@ -17,14 +17,53 @@ const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent
     { id: 'links', label: 'LINKS', icon: <Link className="w-4 h-4" /> },
   ];
 
+  // Split menu items into two rows for small screens
+  const firstRowItems = menuItems.slice(0, 3);
+  const secondRowItems = menuItems.slice(3);
+
   return (
     <nav className="w-full">
-      <div className="flex flex-row sm:flex-col overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0">
+      {/* Mobile layout (two rows) */}
+      <div className="flex flex-col sm:hidden">
+        <div className="flex justify-center mb-1">
+          {firstRowItems.map((item) => (
+            <div key={item.id} className="flex-1 mx-1">
+              <button
+                onClick={() => setActiveContent(item.id as ContentType)}
+                className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
+                  activeContent === item.id ? 'active' : ''
+                }`}
+              >
+                {item.icon}
+                <span className="font-mono">{item.label}</span>
+              </button>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center">
+          {secondRowItems.map((item) => (
+            <div key={item.id} className="flex-1 mx-1">
+              <button
+                onClick={() => setActiveContent(item.id as ContentType)}
+                className={`menu-item w-full text-left flex items-center gap-1 text-xs px-1 py-1 ${
+                  activeContent === item.id ? 'active' : ''
+                }`}
+              >
+                {item.icon}
+                <span className="font-mono">{item.label}</span>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop layout (column) */}
+      <div className="hidden sm:flex sm:flex-col">
         {menuItems.map((item) => (
-          <div key={item.id} className="flex-shrink-0 sm:w-full mr-2 sm:mr-0 sm:mb-2">
+          <div key={item.id} className="sm:w-full sm:mb-2">
             <button
               onClick={() => setActiveContent(item.id as ContentType)}
-              className={`menu-item w-full text-left flex items-center gap-2 text-sm whitespace-nowrap sm:whitespace-normal ${
+              className={`menu-item w-full text-left flex items-center gap-2 text-sm ${
                 activeContent === item.id ? 'active' : ''
               }`}
             >

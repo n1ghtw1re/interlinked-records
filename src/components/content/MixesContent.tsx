@@ -58,30 +58,30 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
               className="border border-border p-4 hover:border-primary transition-colors duration-150 cursor-pointer"
               onClick={() => handleMixClick(mix)}
             >
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="mr-4 border border-border p-2">
-                    <Music2 className="w-6 h-6 text-primary" />
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                <div className="flex items-start sm:items-center mb-2 sm:mb-0">
+                  <div className="mr-3 border border-border p-2">
+                    <Music2 className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg text-secondary font-display tracking-wider">{mix.title}</h3>
+                    <h3 className="text-md sm:text-lg text-secondary font-display tracking-wider">{mix.title}</h3>
                     <div className="text-sm">{mix.artist}</div>
                   </div>
                 </div>
-                <div className="text-xs border border-muted px-2 py-1">
+                <div className="text-xs border border-muted px-2 py-1 self-start">
                   {mix.duration}
                 </div>
               </div>
               
-              <div className="mt-3 flex justify-between items-center text-xs">
-                <div className="flex gap-2">
+              <div className="mt-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                <div className="flex flex-wrap gap-2">
                   {mix.tags.map((tag, index) => (
-                    <span key={index} className="px-2 py-1 border border-border">
+                    <span key={index} className="px-2 py-1 border border-border text-xs">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="text-muted-foreground">
+                <div className="text-xs text-muted-foreground mt-1 sm:mt-0">
                   {new Date(mix.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
