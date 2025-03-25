@@ -32,7 +32,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ className = '' }) => {
   };
 
   return (
-    <div className={`theme-switch ${className}`}>
+    <div className={`${className}`}>
       <button 
         onClick={toggleTheme}
         className="p-2 focus:outline-none"
