@@ -7,6 +7,7 @@ import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
 import ReleaseDetail from './content/ReleaseDetail';
 import MixDetail from './content/MixDetail';
+import ThemeSwitcher from './ThemeSwitcher';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Disc, Headphones, Link as LinkIcon, Music2, ArrowRight } from 'lucide-react';
 
@@ -34,7 +35,6 @@ const MainLayout: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(true);
   const isMobile = useIsMobile();
 
-  // Randomly trigger glitch effects
   useEffect(() => {
     const glitchInterval = setInterval(() => {
       if (Math.random() > 0.7) {
@@ -46,12 +46,11 @@ const MainLayout: React.FC = () => {
     return () => clearInterval(glitchInterval);
   }, []);
 
-  // For mobile, when a page is selected, collapse the menu
   useEffect(() => {
     if (isMobile) {
-      setMenuVisible(true); // Always show menu initially for mobile
+      setMenuVisible(true);
     } else {
-      setMenuVisible(true); // Always visible for desktop
+      setMenuVisible(true);
     }
   }, [isMobile]);
 
@@ -63,7 +62,6 @@ const MainLayout: React.FC = () => {
       setMixData(data);
     }
     
-    // On mobile, hide menu when content is selected
     if (isMobile) {
       setMenuVisible(false);
     }
@@ -96,7 +94,6 @@ const MainLayout: React.FC = () => {
     }
   };
 
-  // Mobile menu items for consistent styling across components
   const menuItems = [
     { id: 'about', label: 'ABOUT', icon: <Disc className="w-4 h-4" /> },
     { id: 'discography', label: 'DISCOGRAPHY', icon: <Music2 className="w-4 h-4" /> },
@@ -105,10 +102,10 @@ const MainLayout: React.FC = () => {
     { id: 'links', label: 'LINKS', icon: <LinkIcon className="w-4 h-4" /> },
   ];
 
-  // Desktop Layout (unchanged from original)
   if (!isMobile) {
     return (
       <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
+        <ThemeSwitcher />
         <div className="scan-line"></div>
         <div className="static-overlay"></div>
         <div className="green-burn"></div>
@@ -138,9 +135,9 @@ const MainLayout: React.FC = () => {
     );
   }
 
-  // Mobile Layout
   return (
     <div className={`crt min-h-screen flex flex-col ${glitchEffect ? 'animate-glitch-text' : ''}`}>
+      <ThemeSwitcher className="z-[200]" />
       <div className="scan-line"></div>
       <div className="static-overlay"></div>
       <div className="green-burn"></div>
