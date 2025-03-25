@@ -21,45 +21,54 @@ const PlaylistsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       genre: 'Progressive House, Trance, Breaks, Minimal Techno',
       trackCount: 473,
       lastUpdated: '2024-05-28',
-      embedUrl: 'https://open.spotify.com/embed/playlist/3XpDcVIkMBwZZWD9ufJP1C?utm_source=generator',
+      embedUrl: 'https://open.spotify.com/embed/playlist/3XpDcVIkMBwZZWD9ufJP1C?utm_source=generator&theme=0',
       description: "Global Underground is inspired by the popular CD mix series of the 90s and 2000s that featured cutting edge DJs showcasing their skills. This mix of the best deep and progressive house, techno, trance, and breakbeat tracks will transport you around the world."
     },
     {
       id: 'PLY-003',
-      title: 'Digital Dreams',
-      genre: 'IDM, Glitch, Experimental',
-      trackCount: 28,
+      title: 'Electro Grunge',
+      genre: 'Electro, Indie Dance, Hipster EDM',
+      trackCount: 168,
       lastUpdated: '2024-04-12',
-      embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO45P0Eo?utm_source=generator',
-      description: "An experimental journey through IDM, glitch, and digital soundscapes. This playlist explores the more cerebral side of electronic music with complex rhythms and intricate sound design."
+      embedUrl: 'https://open.spotify.com/embed/playlist/0cP2uBWEa95gDuYcS3VCO6?utm_source=generator&theme=0',
+      description: "Inspired by dive bars and clubs from Brooklyn, Electro Grunge is a mix of indie dance, underground electro and hipster bar anthems."
     },
     {
       id: 'PLY-004',
-      title: "Hacker's Ambient",
-      genre: 'Ambient, Atmospheric',
-      trackCount: 24,
+      title: "Hard Drive Techno",
+      genre: 'Peak-Time Techno, Raw Techno, Rave Techno, Acid Techno',
+      trackCount: 109,
       lastUpdated: '2024-06-02',
-      embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DWXhcuQw7w6Qn?utm_source=generator',
-      description: "Atmospheric ambient tracks perfect for coding sessions, deep work, or contemplative moments. These soundscapes create an immersive background that enhances focus and creativity."
+      embedUrl: 'https://open.spotify.com/embed/playlist/1NsmXbwdFeYaXWc6ju7Ggj?utm_source=generator&theme=0',
+      description: "Hard Drive Techno features a mix of hard, raw, hypnotic, and peak-time techno tracks that will make you lose yourself in the music. Curated for the rave, these songs are best played late at night for the underground crowds."
     },
     {
       id: 'PLY-005',
-      title: 'Gothic Elegance',
-      genre: 'Darkwave, Gothic, Post-Punk',
-      trackCount: 31,
+      title: 'AfterHours',
+      genre: 'Chillout, Trip Hop, Electronica, LoFi',
+      trackCount: 168,
       lastUpdated: '2024-05-14',
-      embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DX4OzrY981I1W?utm_source=generator',
-      description: "A collection of darkwave, gothic rock, and post-punk classics and contemporary tracks. This playlist embraces the aesthetic of dark romanticism and melancholic beauty."
+      embedUrl: 'https://open.spotify.com/embed/playlist/2O8Y8l3YrzK7Eu9vfm4kH6?utm_source=generator&theme=0',
+      description: "Unwind and decompress from the pulsating energy of the night. This playlist is a curated mix of electronic and trip hop tunes, designed to provide the perfect backdrop for those late-night chill sessions."
     },
     {
       id: 'PLY-006',
-      title: 'Lo-Fi Shadows',
-      genre: 'Lo-Fi, Chillhop, Dark Ambient',
-      trackCount: 45,
-      lastUpdated: '2024-06-20',
-      embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator',
-      description: "A darker take on lo-fi hip hop, perfect for late night study sessions or rainy day contemplation. These tracks blend downtempo beats with atmospheric textures and melancholic melodies."
+      title: 'Dark Goth Club',
+      genre: 'Darkwave, Post-Punk, Dark Disco, Goth',
+      trackCount: 145,
+      lastUpdated: '2025-03-25',
+      embedUrl: 'https://open.spotify.com/embed/playlist/1lkEa3NsUl0Xt9GKjtwsYD?utm_source=generator&theme=0',
+      description: "For those dark undeground nightclubs that blur the reality of fact and fiction."
     },
+    {
+      id: 'PLY-007',
+      title: 'Hard Rave',
+      genre: 'Hard Techno, Hard Trance, Hardcore',
+      trackCount: 51,
+      lastUpdated: '2025-03-25',
+      embedUrl: 'https://open.spotify.com/embed/playlist/0d95uDynzWK3z3EmBqOOFg?utm_source=generator&theme=0',
+      description: "Hard Rave music is back and bigger than ever. 145bpm plus hard driving tunes for those endless nights in the warehouse rave."
+    }
   ];
 
   const handlePlaylistClick = (playlist: any) => {
