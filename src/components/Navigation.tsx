@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ContentType } from './MainLayout';
-import { Disc, Headphones, Link, Music2, ArrowRight } from 'lucide-react';
+import { Disc, Headphones, Link, Music2, ArrowRight, ListMusic } from 'lucide-react';
 
 interface NavigationProps {
   activeContent: ContentType;
@@ -15,6 +15,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeContent, setActiveContent
     { id: 'mixes', label: 'MIXES', icon: <Headphones className="w-4 h-4" /> },
     { id: 'events', label: 'EVENTS', icon: <ArrowRight className="w-4 h-4" /> },
     { id: 'links', label: 'LINKS', icon: <Link className="w-4 h-4" /> },
+    { id: 'playlists', label: 'PLAYLISTS', icon: <ListMusic className="w-4 h-4" /> },
   ];
 
   return (

@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Skull } from 'lucide-react';
-import { Switch } from '@/components/ui/switch';
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -34,17 +33,16 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ className = '' }) => {
 
   return (
     <div className={`theme-switch ${className}`}>
-      <div className="flex items-center gap-2">
-        <Switch 
-          checked={isGothTheme} 
-          onCheckedChange={toggleTheme} 
-          className="data-[state=checked]:bg-red-800" 
-        />
+      <button 
+        onClick={toggleTheme}
+        className="p-2 focus:outline-none"
+        aria-label="Toggle theme"
+      >
         <Skull 
           className={`skull-icon w-5 h-5 ${isGothTheme ? 'text-red-600' : 'text-green-500'}`} 
           strokeWidth={isGothTheme ? 1.5 : 2}
         />
-      </div>
+      </button>
     </div>
   );
 };

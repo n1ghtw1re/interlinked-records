@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import AboutContent from './content/AboutContent';
@@ -5,13 +6,15 @@ import DiscographyContent from './content/DiscographyContent';
 import MixesContent from './content/MixesContent';
 import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
+import PlaylistsContent from './content/PlaylistsContent';
 import ReleaseDetail from './content/ReleaseDetail';
 import MixDetail from './content/MixDetail';
+import PlaylistDetail from './content/PlaylistDetail';
 import ThemeSwitcher from './ThemeSwitcher';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Disc, Headphones, Link as LinkIcon, Music2, ArrowRight } from 'lucide-react';
+import { Disc, Headphones, Link as LinkIcon, Music2, ArrowRight, ListMusic } from 'lucide-react';
 
-export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'release' | 'mix';
+export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'playlists' | 'release' | 'mix' | 'playlist';
 
 export interface ReleaseData {
   id: string;
@@ -21,10 +24,21 @@ export interface ReleaseData {
   description?: string;
 }
 
+export interface PlaylistData {
+  id: string;
+  title: string;
+  genre: string;
+  trackCount: number;
+  lastUpdated: string;
+  embedUrl: string;
+  description: string;
+}
+
 export interface ContentProps {
   setActiveContent: (content: ContentType, data?: any) => void;
   releaseData?: ReleaseData;
   mixData?: any;
+  playlistData?: PlaylistData;
 }
 
 const MainLayout: React.FC = () => {
@@ -32,6 +46,7 @@ const MainLayout: React.FC = () => {
   const [glitchEffect, setGlitchEffect] = useState(false);
   const [releaseData, setReleaseData] = useState<ReleaseData | null>(null);
   const [mixData, setMixData] = useState<any>(null);
+  const [playlistData, setPlaylistData] = useState<PlaylistData | null>(null);
   const [menuVisible, setMenuVisible] = useState(true);
   const isMobile = useIsMobile();
 
@@ -60,6 +75,8 @@ const MainLayout: React.FC = () => {
       setReleaseData(data);
     } else if (content === 'mix' && data) {
       setMixData(data);
+    } else if (content === 'playlist' && data) {
+      setPlaylistData(data);
     }
     
     if (isMobile) {
@@ -85,10 +102,14 @@ const MainLayout: React.FC = () => {
         return <EventsContent setActiveContent={handleContentChange} />;
       case 'links':
         return <LinksContent setActiveContent={handleContentChange} />;
+      case 'playlists':
+        return <PlaylistsContent setActiveContent={handleContentChange} />;
       case 'release':
         return <ReleaseDetail releaseData={releaseData} setActiveContent={handleContentChange} />;
       case 'mix':
         return <MixDetail mixData={mixData} setActiveContent={handleContentChange} />;
+      case 'playlist':
+        return <PlaylistDetail playlistData={playlistData} setActiveContent={handleContentChange} />;
       default:
         return <AboutContent setActiveContent={handleContentChange} />;
     }
@@ -100,6 +121,7 @@ const MainLayout: React.FC = () => {
     { id: 'mixes', label: 'MIXES', icon: <Headphones className="w-4 h-4" /> },
     { id: 'events', label: 'EVENTS', icon: <ArrowRight className="w-4 h-4" /> },
     { id: 'links', label: 'LINKS', icon: <LinkIcon className="w-4 h-4" /> },
+    { id: 'playlists', label: 'PLAYLISTS', icon: <ListMusic className="w-4 h-4" /> },
   ];
 
   if (!isMobile) {
