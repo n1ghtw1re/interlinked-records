@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import AboutContent from './content/AboutContent';
@@ -8,6 +7,8 @@ import EventsContent from './content/EventsContent';
 import LinksContent from './content/LinksContent';
 import ReleaseDetail from './content/ReleaseDetail';
 import MixDetail from './content/MixDetail';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Disc, Headphones, Link as LinkIcon, Music2, ArrowRight } from 'lucide-react';
 
 export type ContentType = 'about' | 'discography' | 'mixes' | 'events' | 'links' | 'release' | 'mix';
 
@@ -30,6 +31,8 @@ const MainLayout: React.FC = () => {
   const [glitchEffect, setGlitchEffect] = useState(false);
   const [releaseData, setReleaseData] = useState<ReleaseData | null>(null);
   const [mixData, setMixData] = useState<any>(null);
+  const [menuVisible, setMenuVisible] = useState(true);
+  const isMobile = useIsMobile();
 
   // Randomly trigger glitch effects
   useEffect(() => {
@@ -43,12 +46,32 @@ const MainLayout: React.FC = () => {
     return () => clearInterval(glitchInterval);
   }, []);
 
+  // For mobile, when a page is selected, collapse the menu
+  useEffect(() => {
+    if (isMobile) {
+      setMenuVisible(true); // Always show menu initially for mobile
+    } else {
+      setMenuVisible(true); // Always visible for desktop
+    }
+  }, [isMobile]);
+
   const handleContentChange = (content: ContentType, data?: any) => {
     setActiveContent(content);
     if (content === 'release' && data) {
       setReleaseData(data);
     } else if (content === 'mix' && data) {
       setMixData(data);
+    }
+    
+    // On mobile, hide menu when content is selected
+    if (isMobile) {
+      setMenuVisible(false);
+    }
+  };
+
+  const toggleMenu = () => {
+    if (isMobile) {
+      setMenuVisible(!menuVisible);
     }
   };
 
@@ -73,32 +96,98 @@ const MainLayout: React.FC = () => {
     }
   };
 
+  // Mobile menu items for consistent styling across components
+  const menuItems = [
+    { id: 'about', label: 'ABOUT', icon: <Disc className="w-4 h-4" /> },
+    { id: 'discography', label: 'DISCOGRAPHY', icon: <Music2 className="w-4 h-4" /> },
+    { id: 'mixes', label: 'MIXES', icon: <Headphones className="w-4 h-4" /> },
+    { id: 'events', label: 'EVENTS', icon: <ArrowRight className="w-4 h-4" /> },
+    { id: 'links', label: 'LINKS', icon: <LinkIcon className="w-4 h-4" /> },
+  ];
+
+  // Desktop Layout (unchanged from original)
+  if (!isMobile) {
+    return (
+      <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
+        <div className="scan-line"></div>
+        <div className="static-overlay"></div>
+        <div className="green-burn"></div>
+        
+        <div className="w-full max-w-6xl mx-auto my-8 flex border-2 border-primary p-2">
+          <div className="w-64 border-r border-border">
+            <div className="mb-8 px-4">
+              <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
+                INTERLINKED
+              </h1>
+              <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
+                RECORDS
+              </h2>
+            </div>
+            
+            <Navigation 
+              activeContent={activeContent} 
+              setActiveContent={handleContentChange} 
+            />
+          </div>
+          
+          <main className="flex-1 p-8 overflow-hidden animate-screen-flicker">
+            {renderContent()}
+          </main>
+        </div>
+      </div>
+    );
+  }
+
+  // Mobile Layout
   return (
-    <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
+    <div className={`crt min-h-screen flex flex-col ${glitchEffect ? 'animate-glitch-text' : ''}`}>
       <div className="scan-line"></div>
       <div className="static-overlay"></div>
       <div className="green-burn"></div>
       
-      <div className="w-full max-w-6xl mx-auto my-8 flex border-2 border-primary p-2">
-        <div className="w-64 border-r border-border">
-          <div className="mb-8 px-4">
-            <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
+      <div className="w-full max-w-6xl mx-auto my-4 border-2 border-primary p-2 flex flex-col">
+        <div className="flex justify-between items-center mb-2 px-4">
+          <div>
+            <h1 className="text-2xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
               INTERLINKED
             </h1>
-            <h2 className="text-xl font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
+            <h2 className="text-lg font-display tracking-wider text-accent glitch-text" style={{"--glitch-delay": "0.7"} as React.CSSProperties}>
               RECORDS
             </h2>
           </div>
           
-          <Navigation 
-            activeContent={activeContent} 
-            setActiveContent={handleContentChange} 
-          />
+          {!menuVisible && (
+            <button 
+              onClick={toggleMenu}
+              className="menu-item px-2 py-1 text-sm"
+            >
+              MENU
+            </button>
+          )}
         </div>
         
-        <main className="flex-1 p-8 overflow-hidden animate-screen-flicker">
-          {renderContent()}
-        </main>
+        {menuVisible ? (
+          <div className="p-4 border-b border-border">
+            <div className="grid grid-cols-2 gap-2">
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleContentChange(item.id as ContentType)}
+                  className={`menu-item w-full text-left flex items-center gap-2 text-sm ${
+                    activeContent === item.id ? 'active' : ''
+                  }`}
+                >
+                  {item.icon}
+                  <span className="font-mono">{item.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <main className="p-4 overflow-hidden animate-screen-flicker">
+            {renderContent()}
+          </main>
+        )}
       </div>
     </div>
   );
