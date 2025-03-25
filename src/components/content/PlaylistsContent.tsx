@@ -8,21 +8,21 @@ const PlaylistsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const playlists = [
     {
       id: 'PLY-001',
-      title: 'Midnight Drive',
-      genre: 'Synthwave, Darkwave',
-      trackCount: 42,
-      lastUpdated: '2024-06-15',
-      embedUrl: 'https://open.spotify.com/embed/playlist/5RdjzDZl8I6aPaI4ZnWOaN?utm_source=generator',
-      description: "A nocturnal collection perfect for late-night drives through neon-lit city streets. Featuring a range of darkwave, synthwave, and retrowave tracks that evoke a cyberpunk atmosphere."
+      title: 'Dark Disco',
+      genre: 'New Wave, Acid Techno, Goth Disco, Darkwave',
+      trackCount: 128,
+      lastUpdated: '2025-03-23',
+      embedUrl: 'https://open.spotify.com/embed/playlist/5Hye7jIdhLAi4DXr41vpDz?utm_source=generator&theme=0',
+      description: "Peak dark disco tracks curated by TheDonStone - a collection of disco and acid mixed with new wave, post-punk, EBM, goth, darkwave, and techno sounds. Ideal sounds for dark underground clubs."
     },
     {
       id: 'PLY-002',
-      title: 'Underground Techno',
-      genre: 'Techno, Industrial',
-      trackCount: 35,
+      title: 'Global Underground',
+      genre: 'Progressive House, Trance, Breaks, Minimal Techno',
+      trackCount: 473,
       lastUpdated: '2024-05-28',
-      embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DX6J5NfMJS675?utm_source=generator',
-      description: "Hard-hitting underground techno tracks selected for their raw, industrial aesthetic. These hypnotic rhythms are designed for warehouse spaces and dark clubs."
+      embedUrl: 'https://open.spotify.com/embed/playlist/3XpDcVIkMBwZZWD9ufJP1C?utm_source=generator',
+      description: "Global Underground is inspired by the popular CD mix series of the 90s and 2000s that featured cutting edge DJs showcasing their skills. This mix of the best deep and progressive house, techno, trance, and breakbeat tracks will transport you around the world."
     },
     {
       id: 'PLY-003',
