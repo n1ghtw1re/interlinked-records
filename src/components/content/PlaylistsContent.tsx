@@ -35,7 +35,7 @@ const PlaylistsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     },
     {
       id: 'PLY-004',
-      title: 'Hacker's Ambient',
+      title: "Hacker's Ambient",
       genre: 'Ambient, Atmospheric',
       trackCount: 24,
       lastUpdated: '2024-06-02',
