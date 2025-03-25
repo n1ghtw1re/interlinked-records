@@ -3,8 +3,11 @@ import React from 'react';
 import { Music2 } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { ContentProps } from '../MainLayout';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
+  const isMobile = useIsMobile();
+  
   const mixes = [
     {
       id: 'MIX-001',
@@ -74,10 +77,10 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_DJ MIXES</h2>
+      <h2 className="text-2xl font-display tracking-wider text-primary mb-6">_MIXES</h2>
       
       <ScrollArea className="h-[calc(100vh-16rem)]">
-        <div className="pr-4 space-y-4">
+        <div className={`${isMobile ? 'pr-1' : 'pr-4'} space-y-4`}>
           {mixes.map((mix) => (
             <div 
               key={mix.id} 
@@ -90,7 +93,7 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                     <Music2 className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg text-secondary font-display tracking-wider">{mix.title}</h3>
+                    <h3 className={`${isMobile ? 'text-base' : 'text-lg'} text-secondary font-display tracking-wider`}>{mix.title}</h3>
                     <div className="text-sm">{mix.artist}</div>
                   </div>
                 </div>
@@ -99,15 +102,15 @@ const MixesContent: React.FC<ContentProps> = ({ setActiveContent }) => {
                 </div>
               </div>
               
-              <div className="mt-3 flex justify-between items-center text-xs">
-                <div className="flex gap-2">
+              <div className="mt-3 flex flex-wrap justify-between items-center text-xs">
+                <div className="flex flex-wrap gap-2">
                   {mix.tags.map((tag, index) => (
                     <span key={index} className="px-2 py-1 border border-border">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="text-muted-foreground">
+                <div className="text-muted-foreground mt-2 md:mt-0">
                   {new Date(mix.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
