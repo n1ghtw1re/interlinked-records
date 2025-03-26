@@ -145,7 +145,7 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
               SUBSCRIBE TO OUR MAILING LIST FOR EXCLUSIVE EVENT INVITATIONS
             </div>
             <div className="text-xs text-muted-foreground mt-2">
-              EVENTS@INTERLINKED-RECORDS.NET
+              N1GHTW1RE@PROTON.ME
             </div>
           </div>
         </div>
