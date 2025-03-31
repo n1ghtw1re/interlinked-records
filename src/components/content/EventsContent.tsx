@@ -29,24 +29,6 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const events = [
     {
       id: '001',
-      title: 'Graham Gold & Guests @ Cheers',
-      date: '2025-03-29',
-      venue: 'Cheers Pub Street, Siem Reap',
-      artists: ['Graham Gold', 'TheDonStone', 'Heuristic'],
-      description: 'Journey through melodic and europhoic trance in the heart of Siem Reap.',
-      time: '23:00 - 05:00'
-    },
-    {
-      id: '002',
-      title: 'Sunday at Soujorner',
-      date: '2025-03-30',
-      venue: 'Sojourner House, Siem Reap',
-      artists: ['Graham Gold', 'TheDonStone', 'Heuristic'],
-      description: 'VIP Sunday brunch pool party with deep house vibes.',
-      time: '12:00 - 01:00'
-    },
-    {
-      id: '003',
       title: 'Angkor Bliss Khmer New Year Celebration',
       date: '2025-04-14',
       venue: 'Angkor Bliss, Siem Reap',
@@ -55,7 +37,16 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       time: '18:00 - 08:00'
     },
     {
-      id: '004',
+      id: '002',
+      title: 'Bollywood @ Infusion',
+      date: '2025-03-29',
+      venue: 'Infusion, Siem Reap',
+      artists: ['TheDonStone'],
+      description: 'A night of Bollywood and EDM Party Songs at one of the best cocktail bars in Siem Reap',
+      time: '23:00 - 02:00'
+    },
+    {
+      id: '003',
       title: 'Paul Oakenfold @ Chew & Bash',
       date: '2025-04-26',
       venue: 'Chew & Bash, Phnom Penh',
@@ -64,7 +55,7 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       time: '22:00 - 06:00'
     },
     {
-      id: '005',
+      id: '004',
       title: 'Paul Oakenfold @ The Labyrinth',
       date: '2025-04-30',
       venue: 'The Labyrinth, Siem Reap',
