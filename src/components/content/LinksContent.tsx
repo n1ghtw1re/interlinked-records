@@ -28,7 +28,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       category: 'AFFILIATED COLLECTIVES',
       items: [
         { label: 'N1GHTW1RE', url: 'https://n1ghtw1re.neocities.org/' },
-        { label: 'THEDONSTONE', url: 'https://thedonstone.com/' }
+        { label: 'THEDONSTONE', url: 'https://thedonstone.lovable.app/' }
       ]
     },
     {
