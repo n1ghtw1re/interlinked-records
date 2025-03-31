@@ -68,9 +68,7 @@
 
     --radius: 0px;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -138,8 +136,9 @@
     mix-blend-mode: screen;
   }
 
+  /* Updated scan-line to be contained within the main border */
   .scan-line {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -218,7 +217,7 @@
 /* Add scanning animation */
 @keyframes scan-line {
   0% { transform: translateY(0); }
-  100% { transform: translateY(100vh); }
+  100% { transform: translateY(100%); }
 }
 
 /* Add static animation */

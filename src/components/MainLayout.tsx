@@ -127,12 +127,12 @@ const MainLayout: React.FC = () => {
   if (!isMobile) {
     return (
       <div className={`crt min-h-screen flex ${glitchEffect ? 'animate-glitch-text' : ''}`}>
-        <div className="scan-line"></div>
         <div className="static-overlay"></div>
         <div className="green-burn"></div>
         
         <div className="w-full max-w-6xl mx-auto my-8 flex border-2 border-primary p-2 relative">
           <ThemeSwitcher className="absolute top-2 right-2 z-[200]" />
+          <div className="scan-line"></div>
           <div className="w-64 border-r border-border">
             <div className="mb-8 px-4">
               <h1 className="text-3xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
@@ -159,12 +159,12 @@ const MainLayout: React.FC = () => {
 
   return (
     <div className={`crt min-h-screen flex flex-col ${glitchEffect ? 'animate-glitch-text' : ''}`}>
-      <div className="scan-line"></div>
       <div className="static-overlay"></div>
       <div className="green-burn"></div>
       
       <div className="w-full max-w-6xl mx-auto my-4 border-2 border-primary p-2 flex flex-col relative">
         <ThemeSwitcher className="absolute top-2 right-2 z-[200]" />
+        <div className="scan-line"></div>
         <div className="flex justify-between items-center mb-2 px-4">
           <div>
             <h1 className="text-2xl font-display tracking-wider text-primary glitch-text" style={{"--glitch-delay": "0.5"} as React.CSSProperties}>
