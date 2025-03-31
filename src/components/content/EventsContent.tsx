@@ -39,7 +39,7 @@ const EventsContent: React.FC<ContentProps> = ({ setActiveContent }) => {
     {
       id: '002',
       title: 'Bollywood @ Infusion',
-      date: '2025-03-29',
+      date: '2025-04-18',
       venue: 'Infusion, Siem Reap',
       artists: ['TheDonStone'],
       description: 'A night of Bollywood and EDM Party Songs at one of the best cocktail bars in Siem Reap',
