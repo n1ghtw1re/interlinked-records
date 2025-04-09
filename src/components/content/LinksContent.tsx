@@ -25,7 +25,7 @@ const LinksContent: React.FC<ContentProps> = ({ setActiveContent }) => {
       ]
     },
     {
-      category: 'AFFILIATED COLLECTIVES',
+      category: 'N1GHTW1RE COLLECTIVE',
       items: [
         { label: 'N1GHTW1RE', url: 'https://n1ghtw1re.neocities.org/' },
         { label: 'N1GHTW1RE STUDIOS', url: 'https://n1ghtw1re-studios.lovable.app/' },
