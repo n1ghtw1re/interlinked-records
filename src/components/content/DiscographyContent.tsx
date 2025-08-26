@@ -6,6 +6,15 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
+      id: 'INT-019',
+      artist: 'Anarchy Doll',
+      title: 'LazerPop',
+      format: 'Digital Album',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2831514407/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/lazer-pop">Lazer Pop by Anarchy Doll</a></iframe>',
+      description: "Anarchy Doll exists in the liminal space between beauty and destruction, where the polished perfection of K-Pop collides with the raw, unfiltered rage of punk rebellion."
+    },
+    {
       id: 'INT-018',
       artist: 'AnticPanic',
       title: 'Microdose Reality',
