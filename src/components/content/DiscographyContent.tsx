@@ -6,6 +6,15 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
+      id: 'INT-020',
+      artist: 'ImVexd',
+      title: 'Corrosive_001',
+      format: 'Digital EP',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=277366194/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/corrosive-001">Corrosive_001 by C1nder5</a></iframe>',
+      description: "Corrosive_001 is the debut EP from C1nder5, a five-track descent into industrial decay and sonic abrasion. Each track unfolds like a corrupted terminal log—glitching, grinding, and pulsing with volatile energy."
+    },
+    {
       id: 'INT-019',
       artist: 'Anarchy Doll',
       title: 'LazerPop',
