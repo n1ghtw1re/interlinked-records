@@ -6,6 +6,33 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
+      id: 'INT-024',
+      artist: 'Axi0m',
+      title: 'Trapped Inside Your Radio',
+      format: 'Digital Album',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=794912075/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/trapped-inside-your-radio">Trapped Inside Your Radio by Axi0m</a></iframe>',
+      description: "You ride the echo of distant laughter filtered through blackened speakers, as if the city itself hums your heartbeat in static pulses. Here, every melody feels like a half-remembered dream, looping through the skeletal remains of neon signs and vacant diners."
+    },
+    {
+      id: 'INT-023',
+      artist: 'ImVexd',
+      title: 'Welcome to Santa Clara',
+      format: 'Digital Album',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=153815335/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/welcome-to-santa-clara">Welcome to Santa Clara by ImVexd</a></iframe>',
+      description: "From the depths of the digital underground comes ImVexd – Welcome to Santa Clara, a six-track descent into the neon crypt. Synths scream like lost souls. Drum machines pulse like vampire hearts."
+    },
+    {
+      id: 'INT-022',
+      artist: 'C1nder5',
+      title: 'Industry_002',
+      format: 'Digital EP',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=642382919/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/industry-002">Industry_002 by C1nder5</a></iframe>',
+      description: "Industry_002 is the second transmission from C1nder5—five tracks forged in the pressure chamber of post-industrial collapse."
+    },
+    {
       id: 'INT-021',
       artist: 'C1nder5',
       title: 'Corrosive_001',
