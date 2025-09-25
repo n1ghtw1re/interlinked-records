@@ -6,13 +6,22 @@ import { ContentProps } from '../MainLayout';
 const DiscographyContent: React.FC<ContentProps> = ({ setActiveContent }) => {
   const releases = [
     {
-      id: 'INT-020',
-      artist: 'ImVexd',
+      id: 'INT-021',
+      artist: 'C1nder5',
       title: 'Corrosive_001',
       format: 'Digital EP',
       year: '2025',
       embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=277366194/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/corrosive-001">Corrosive_001 by C1nder5</a></iframe>',
       description: "Corrosive_001 is the debut EP from C1nder5, a five-track descent into industrial decay and sonic abrasion. Each track unfolds like a corrupted terminal log—glitching, grinding, and pulsing with volatile energy."
+    },
+    {
+      id: 'INT-020',
+      artist: 'ImVexd',
+      title: 'At XGates',
+      format: 'Digital Album',
+      year: '2025',
+      embedUrl: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3404121617/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://interlinkedai.bandcamp.com/album/at-xgates">at XGates by ImVexd</a></iframe>',
+      description: "You met them at Hot Topic—\nlips black as the void, eyes like abandoned arcades.\nThey whispered band names like spells,\nand stitched your name into the lining of their hoodie.\nYou never saw them again. Or maybe you never existed."
     },
     {
       id: 'INT-019',
